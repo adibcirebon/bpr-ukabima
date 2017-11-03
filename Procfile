@@ -1,1 +1,0 @@
-web: mvn clean spring-boot:run -Dserver.port=$PORT
