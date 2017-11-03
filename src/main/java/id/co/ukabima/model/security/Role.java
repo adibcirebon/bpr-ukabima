@@ -1,4 +1,4 @@
-package ukabima.co.id.model.security;
+package id.co.ukabima.model.security;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

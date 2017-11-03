@@ -1,10 +1,10 @@
-package ukabima.co.id.api;
+package id.co.ukabima.api;
 
+import id.co.ukabima.repository.AgamaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ukabima.co.id.repository.AgamaRepository;
 
 @RestController
 @RequestMapping("/api")

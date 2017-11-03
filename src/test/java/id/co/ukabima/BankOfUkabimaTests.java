@@ -1,4 +1,4 @@
-package ukabima.co.id;
+package id.co.ukabima;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

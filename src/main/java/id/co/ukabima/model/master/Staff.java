@@ -1,6 +1,6 @@
-package ukabima.co.id.model.master;
+package id.co.ukabima.model.master;
 
-import ukabima.co.id.model.security.User;
+import id.co.ukabima.model.security.User;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,4 +1,4 @@
-package ukabima.co.id.model.master;
+package id.co.ukabima.model.master;
 
 import org.hibernate.annotations.GenericGenerator;
 

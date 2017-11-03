@@ -1,11 +1,11 @@
-package ukabima.co.id;
+package id.co.ukabima;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Profile;
 
 @SpringBootApplication
-@EnableAutoConfiguration
+@Profile({"heroku", "default"})
 public class BankOfUkabima {
 
     public static void main(String[] args) {

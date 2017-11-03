@@ -1,4 +1,4 @@
-package ukabima.co.id.controller;
+package id.co.ukabima.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,6 +8,6 @@ public class IndexController {
 
     @GetMapping(value = {"/", "/home"})
     public String homeApplication() {
-        return "/pages/index";
+        return "pages/index";
     }
 }

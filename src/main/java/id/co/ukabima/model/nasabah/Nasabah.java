@@ -1,6 +1,6 @@
-package ukabima.co.id.model.nasabah;
+package id.co.ukabima.model.nasabah;
 
-import ukabima.co.id.model.security.User;
+import id.co.ukabima.model.security.User;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
