@@ -13,5 +13,9 @@ public class WebMVCConfig extends WebMvcConfigurerAdapter {
 //        super.addResourceHandlers(registry);
         registry.addResourceHandler("/webjars/**")
                 .addResourceLocations("classpath:/META-INF/resources/webjars/");
+        registry.addResourceHandler("/js/**")
+                .addResourceLocations("classpath:/static/js/");
+        registry.addResourceHandler("/css/**")
+                .addResourceLocations("classpath:/static/css/");
     }
 }
