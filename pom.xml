@@ -102,7 +102,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <finalName>ebpr-${project.version}</finalName>
+                    <finalName>e-bpr</finalName>
                 </configuration>
             </plugin>
         </plugins>
