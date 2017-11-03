@@ -19,7 +19,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "/webjars/**",
                         "/home",
                         "/css/**",
-                        "/js/**"}).permitAll()
+                        "/js/**",
+                        "/private/api/**"}).permitAll()
                 .anyRequest().authenticated()
                 .and().httpBasic();
     }
