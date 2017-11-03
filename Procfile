@@ -1,0 +1,1 @@
+web: java -jar target/ebpr-1.0-SNAPSHOT.jar -Dserver.port=$PORT
