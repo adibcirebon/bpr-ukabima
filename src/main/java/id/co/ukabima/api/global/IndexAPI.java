@@ -1,4 +1,4 @@
-package id.co.ukabima.api;
+package id.co.ukabima.api.global;
 
 import id.co.ukabima.repository.AgamaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
