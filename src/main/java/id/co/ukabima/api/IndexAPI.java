@@ -15,7 +15,6 @@ public class IndexAPI {
 
     @GetMapping("/halo")
     public String haloController() {
-        agamaRepository.findAll();
         return "Halo World";
     }
 }
