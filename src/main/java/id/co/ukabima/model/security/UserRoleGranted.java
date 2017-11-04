@@ -1,11 +1,15 @@
 package id.co.ukabima.model.security;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "user_roles_apply", schema = "security")
 public class UserRoleGranted {

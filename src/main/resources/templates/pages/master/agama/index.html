@@ -5,8 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>BPR UKABIMA</title>
-
+    <title>Daftar agama</title>
     <script src="webjars/jquery/1.11.1/jquery.min.js"
             th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
     <script src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"
@@ -19,10 +18,22 @@
     <link rel="stylesheet" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"
           th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"/>
     <link rel="stylesheet" href="webjars/datatables/1.10.15/css/dataTables.bootstrap.min.css"
-          th:href="@{webjars/datatables/1.10.15/css/dataTables.bootstrap.min.css}"/>
+          th:href="@{/webjars/datatables/1.10.15/css/dataTables.bootstrap.min.css}"/>
     <link rel="stylesheet" href="webjars/datatables/1.10.15/css/jquery.dataTables.min.css"
           th:href="@{/webjars/datatables/1.10.15/css/jquery.dataTables.min.css}"/>
 </head>
-<body>
+<body class="container">
+
+<table class="table table-bordered" id="listAgama">
+    <thead>
+    <tr>
+        <td>No</td>
+        <td>Nama</td>
+        <td>Aksi</td>
+    </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<script src="../../../../static/js/master/agama.js" th:src="@{/js/master/agama.js}"></script>
 </body>
 </html>
