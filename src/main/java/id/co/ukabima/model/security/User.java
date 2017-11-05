@@ -32,7 +32,13 @@ public class User {
     @Column(name = "nama_lengkap", nullable = false, length = 50)
     private String namaLengkap;
 
+    @Column(name = "is_nasabah", nullable = false)
+    private boolean nasabah;
+
+    private boolean active;
+
     @OneToMany(mappedBy = "user")
     private List<UserRoleGranted> roles = new ArrayList<>();
+
 
 }
