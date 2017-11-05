@@ -1,5 +1,7 @@
 package id.co.ukabima.configs;
 
+import nz.net.ultraq.thymeleaf.LayoutDialect;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -18,4 +20,14 @@ public class WebMVCConfig extends WebMvcConfigurerAdapter {
         registry.addResourceHandler("/css/**")
                 .addResourceLocations("classpath:/static/css/");
     }
+
+    @Bean
+    LayoutDialect thymeleafLayoutDialect() {
+        return new LayoutDialect();
+    }
+//
+//    @Bean
+//    GroupingStrategy thymeleafGroupingStrategy() {
+//        return new GroupingStrategy();
+//    }
 }

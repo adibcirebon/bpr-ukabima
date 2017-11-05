@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security" layout:decorate="~{layout/main}">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport"
@@ -8,6 +9,15 @@
     <title>Halaman Nasabah</title>
 </head>
 <body>
+
+<section layout:fragment="content" class="container">
+    <div class="col-md-4">
+        Side Bar
+    </div>
+    <div class="col-md-8">
+        <div layout:fragment="main-content"></div>
+    </div>
+</section>
 
 </body>
 </html>

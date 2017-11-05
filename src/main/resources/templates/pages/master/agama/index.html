@@ -1,39 +1,59 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{pages/staff}">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Daftar agama</title>
-    <script src="webjars/jquery/1.11.1/jquery.min.js"
-            th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
-    <script src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"
-            th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
-    <script src="webjars/datatables/1.10.15/js/jquery.dataTables.min.js"
-            th:src="@{/webjars/datatables/1.10.15/js/jquery.dataTables.min.js}"></script>
-    <script src="webjars/datatables/1.10.15/js/dataTables.bootstrap.min.js"
-            th:src="@{/webjars/datatables/1.10.15/js/dataTables.bootstrap.min.js}"></script>
-
-    <link rel="stylesheet" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"
-          th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"/>
-    <link rel="stylesheet" href="webjars/datatables/1.10.15/css/dataTables.bootstrap.min.css"
-          th:href="@{/webjars/datatables/1.10.15/css/dataTables.bootstrap.min.css}"/>
-    <link rel="stylesheet" href="webjars/datatables/1.10.15/css/jquery.dataTables.min.css"
-          th:href="@{/webjars/datatables/1.10.15/css/jquery.dataTables.min.css}"/>
+    <title>Agama - List</title>
 </head>
-<body class="container">
+<body>
 
-<table class="table table-bordered" id="listAgama">
-    <thead>
-    <tr>
-        <td>No</td>
-        <td>Nama</td>
-        <td>Aksi</td>
-    </tr>
-    </thead>
-    <tbody></tbody>
-</table>
-<script src="../../../../static/js/master/agama.js" th:src="@{/js/master/agama.js}"></script>
+<section>
+    <div layout:fragment="side-content">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    Data Master - Agama
+                </h4>
+            </div>
+            <div role="tabpanel">
+                <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li><a href="#" th:href="@{/agama/baru}">Tambah Data</a></li>
+                        <li><a href="#" th:href="@{/agama/cetak}">Cetak</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div th:insert="~{layout/sidebar-admin :: sidebar }"></div>
+    </div>
+    <div layout:fragment="main-content">
+        <ol class="breadcrumb">
+            <li><a href="#" th:href="@{/}">Home</a></li>
+            <li><a href="#" th:href="@{/agama/list}">Agama</a></li>
+            <li class="active">List</li>
+        </ol>
+
+        <div class="page-header">
+            <h1>Daftar Agama</h1>
+            <small>
+                <p>Menu ini digunakan untuk menampilkan daftar master Agama.</p>
+            </small>
+        </div>
+        <table class="table table-bordered" id="listAgama">
+            <thead>
+            <tr>
+                <td>No</td>
+                <td>Nama</td>
+                <td>Aksi</td>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <script src="../../../../static/js/master/agama.js"
+                th:src="@{/js/master/agama.js}">
+        </script>
+    </div>
+</section>
 </body>
 </html>
