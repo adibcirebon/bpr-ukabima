@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{pages/staff}">
+<head>
+    <title>Agama - Data</title>
+</head>
+<body>
+
+<section>
+    <div layout:fragment="side-content">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    Data Master - Agama
+                </h4>
+            </div>
+            <div role="tabpanel">
+                <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li><a href="#" th:href="@{/agama/baru}">Tambah Data</a></li>
+                        <li><a href="#" th:href="@{/agama/cetak}">Cetak</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div th:insert="~{layout/sidebar-admin :: sidebar }"></div>
+    </div>
+    <div layout:fragment="main-content">
+        <ol class="breadcrumb">
+            <li><a href="#" th:href="@{/}">Home</a></li>
+            <li><a href="#" th:href="@{/agama/list}">Agama</a></li>
+            <li class="active">Data</li>
+        </ol>
+
+        <div class="page-header">
+            <h1>Daftar Agama</h1>
+            <small>
+                <p>Menu ini digunakan untuk memanipulasi data Agama.</p>
+            </small>
+        </div>
+        <div>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="kode" class="input-label">Kode</label>
+                    <input type="text" name="kode" id="kode" class="form-control"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+</body>
+</html>
