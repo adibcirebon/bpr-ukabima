@@ -116,6 +116,7 @@ local.properties
 .scala_dependencies
 .worksheet
 
-
+# reporting with jasper report
+src/main/resources/jasper/**/.gitignore
 
 hibernate.cfg.xml

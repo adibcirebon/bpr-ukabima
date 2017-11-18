@@ -2,10 +2,13 @@ package id.co.ukabima.controller.master;
 
 import id.co.ukabima.model.master.Agama;
 import id.co.ukabima.service.AgamaService;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 
@@ -35,5 +38,14 @@ public class AgamaController {
     public String submit(@Valid @ModelAttribute Agama agama) {
         this.agamaService.save(agama);
         return "redirect:/agama/list";
+    }
+
+    @GetMapping(value = "/cetak")
+    public ModelAndView printed(ModelMap map) {
+        map.put("datasource", new JRBeanCollectionDataSource(
+                this.agamaService.findAll()
+        ));
+        map.put("format", "pdf");
+        return new ModelAndView("master/report_agama", map);
     }
 }
