@@ -9,7 +9,7 @@
 
 <section>
     <div layout:fragment="side-content">
-        <div class="panel panel-default">
+        <div class="panel panel-default" th:fragment="panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
                     Data Master - Agama
@@ -18,7 +18,8 @@
             <div role="tabpanel">
                 <div class="panel-body">
                     <ul class="nav nav-pills nav-stacked">
-                        <li><a href="#" th:href="@{/agama/baru}">Tambah Data</a></li>
+                        <li><a href="#" th:href="@{/agama/list}">Daftar Data</a></li>
+                        <li><a href="#" th:href="@{/agama/form}">Tambah Data</a></li>
                         <li><a href="#" th:href="@{/agama/cetak}">Cetak</a></li>
                     </ul>
                 </div>

@@ -9,20 +9,7 @@
 
 <section>
     <div layout:fragment="side-content">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    Data Master - Agama
-                </h4>
-            </div>
-            <div role="tabpanel">
-                <div class="panel-body">
-                    <ul class="nav nav-pills nav-stacked">
-                        <li><a href="#" th:href="@{/agama/baru}">Tambah Data</a></li>
-                        <li><a href="#" th:href="@{/agama/cetak}">Cetak</a></li>
-                    </ul>
-                </div>
-            </div>
+        <div th:insert="~{pages/master/agama/index :: panel-default }">
         </div>
         <hr/>
         <div th:insert="~{layout/sidebar-admin :: sidebar }"></div>
@@ -35,16 +22,25 @@
         </ol>
 
         <div class="page-header">
-            <h1>Daftar Agama</h1>
+            <h1>Data Agama</h1>
             <small>
                 <p>Menu ini digunakan untuk memanipulasi data Agama.</p>
             </small>
         </div>
         <div>
-            <form action="#" method="post">
+            <!--/*@thymesVar id="agama" type="id.co.ukabima.model.master.Agama"*/-->
+            <form action="#" method="post" th:object="${agama}" th:method="post" th:action="@{/agama/submit}">
                 <div class="form-group">
                     <label for="kode" class="input-label">Kode</label>
-                    <input type="text" name="kode" id="kode" class="form-control"/>
+                    <input type="text" name="kode" id="kode" class="form-control" th:field="*{id}" readonly="readonly"/>
+                </div>
+                <div class="form-group">
+                    <label for="nama">Nama</label>
+                    <input type="text" name="nama" id="nama" th:field="*{nama}" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Kirim</button>
+                    <button type="reset" class="btn btn-warning">Kembali</button>
                 </div>
             </form>
         </div>
