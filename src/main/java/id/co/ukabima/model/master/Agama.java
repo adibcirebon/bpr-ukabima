@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 
@@ -19,6 +20,7 @@ public class Agama {
     @GeneratedValue(generator = "gen_agama")
     private String id;
 
+    @NotEmpty
     @Column(name = "agama", nullable = false, unique = true)
     private String nama;
 }

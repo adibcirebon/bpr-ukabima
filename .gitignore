@@ -63,6 +63,8 @@ fabric.properties
 !.vscode/launch.json
 !.vscode/extensions.json
 ### Eclipse template
+.classpath
+.project
 
 .metadata
 bin/
@@ -113,5 +115,8 @@ local.properties
 .cache-main
 .scala_dependencies
 .worksheet
+
+# reporting with jasper report
+src/main/resources/jasper/**/.gitignore
 
 hibernate.cfg.xml
